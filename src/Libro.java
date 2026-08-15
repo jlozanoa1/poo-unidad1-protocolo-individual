@@ -13,6 +13,12 @@ public class Libro {
 
     // Constructor parametrizado para asignar valores específicos
     public Libro(String titulo, String autor, int numeroPaginas) {
+        // Bloque de validaciones de parámetros
+        if (titulo == null || titulo.trim().isEmpty()) {
+            throw new IllegalArgumentException("El título no puede estar vacío.");
+        }
+
+
         this.titulo = titulo;
         this.autor = autor;
         this.numeroPaginas = numeroPaginas;
