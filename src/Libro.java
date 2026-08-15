@@ -18,6 +18,13 @@ public class Libro {
             throw new IllegalArgumentException("El título no puede estar vacío.");
         }
 
+        if (autor == null || autor.trim().isEmpty()) {
+            throw new IllegalArgumentException("El autor no puede estar vacío.");
+        }
+
+        if (numeroPaginas == null || numeroPaginas <= 0) {
+            throw new IllegalArgumentException("El número de páginas debe ser mayor que 0.");
+        }
 
         this.titulo = titulo;
         this.autor = autor;
