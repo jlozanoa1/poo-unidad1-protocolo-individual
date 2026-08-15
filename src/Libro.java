@@ -22,7 +22,7 @@ public class Libro {
             throw new IllegalArgumentException("El autor no puede estar vacío.");
         }
 
-        if (numeroPaginas == null || numeroPaginas <= 0) {
+        if (numeroPaginas <= 0) {
             throw new IllegalArgumentException("El número de páginas debe ser mayor que 0.");
         }
 
