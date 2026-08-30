@@ -23,5 +23,10 @@ class CuentaBancaria {
     public CuentaBancaria(String numeroCuenta, String tipoCuenta) {
         this(numeroCuenta, 1, tipoCuenta);
     }
+
+    // 3. Constructor sin parámetros con valores por defecto.
+    public CuentaBancaria() {
+        this("1111111111", 1, "credito");
+    }
     // ---------- FIN - CONSTRUCTORES ----------
 }
