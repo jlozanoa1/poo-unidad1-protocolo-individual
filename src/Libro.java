@@ -3,15 +3,9 @@ public class Libro {
     private String autor;
     private int numeroPaginas;
 
-    // Constructor sin parámetros
-    public Libro() {
-        this.titulo = "Desconocido";
-        this.autor = "Desconocido";
-        this.numeroPaginas = 0;
-    }
 
-
-    // Constructor parametrizado para asignar valores específicos
+    // ----------- CONSTRUCTORES ------------
+    // 1. Constructor principal parametrizado con validaciones de entrada
     public Libro(String titulo, String autor, int numeroPaginas) {
         // Bloque de validaciones de parámetros
         if (titulo == null || titulo.trim().isEmpty()) {
@@ -31,12 +25,39 @@ public class Libro {
         this.numeroPaginas = numeroPaginas;
     }
 
-    public void obtenerDetalles() {
-        System.out.printf(
-            "Título: %s%nAutor: %s%nNúmero de páginas: %d%n",
-            this.titulo,
-            this.autor,
-            this.numeroPaginas
-        );
+    // 2. Constructor con solo titulo y autor como parámetros, numeroPaginas
+    // por defecto
+    public Libro(String titulo, String autor) {
+        this(titulo, autor, 1);
     }
+
+    // 3. Constructor sin parámetros, todos los valores por defecto
+    public Libro() {
+        this("Desconocido", "Desconocido", 1);
+    }
+    // ----------- FIN - CONSTRUCTORES ------------
+
+
+    // ----------- GETTERS ------------
+    // Método toString por defecto reemplazado para poder imprimir
+    // los valores de las propiedades del objeto directamente.
+    @Override
+    public String toString() {
+        return String.format("Título: %s | Autor: %s | Páginas: %d",
+                this.titulo, this.autor, this.numeroPaginas);
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }
+
+    // ----------- FIN - GETTERS ------------
 }

@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         // Creación de un objeto Libro sin parámetros
         Libro libro1 = new Libro();
-        libro1.obtenerDetalles();
+        System.out.println(libro1);
         System.out.printf("%n%n");
 
 
@@ -13,7 +13,7 @@ public class Main {
             "Miguel de Cervantes",
             1000
         );
-        libro2.obtenerDetalles();
+        System.out.println(libro2);
         System.out.printf("%n%n");
 
 
@@ -25,7 +25,7 @@ public class Main {
             "Miguel de Cervantes",
             1000
         );
-        libro3.obtenerDetalles();
+        System.out.println(libro3);
         System.out.printf("%n%n");
     }
 }
