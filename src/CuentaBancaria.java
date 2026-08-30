@@ -18,5 +18,10 @@ class CuentaBancaria {
             throw new IllegalArgumentException("El tipo de cuenta debe ser \"credito\" o \"debito\".");
         }
     }
+
+    // 2. Constructor parametrizado con dos parámetros.
+    public CuentaBancaria(String numeroCuenta, String tipoCuenta) {
+        this(numeroCuenta, 1, tipoCuenta);
+    }
     // ---------- FIN - CONSTRUCTORES ----------
 }
