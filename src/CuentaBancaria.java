@@ -29,4 +29,25 @@ class CuentaBancaria {
         this("1111111111", 1, "credito");
     }
     // ---------- FIN - CONSTRUCTORES ----------
+
+
+    // ---------- GETTERS ----------
+    @Override
+    public String toString() {
+        return String.format("Número de cuenta: %s | Saldo: %f | Tipo de cuenta: %s.",
+                this.numeroCuenta, this.saldo, this.tipoCuenta);
+    }
+
+    public String getNumeroCuenta() {
+        return this.numeroCuenta;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public String getTipoCuenta() {
+        return this.tipoCuenta;
+    }
+    // ---------- FIN - GETTERS ----------
 }
