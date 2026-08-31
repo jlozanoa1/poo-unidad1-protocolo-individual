@@ -22,4 +22,9 @@ public class Estudiante {
         this.edad = edad;
         this.curso = curso;
     }
+
+    // 2. Constructor con dos parámetros
+    public Estudiante(String nombre, int edad) {
+        this(nombre, edad, "00");
+    }
 }
