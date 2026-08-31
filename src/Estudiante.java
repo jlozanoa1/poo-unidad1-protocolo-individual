@@ -32,4 +32,17 @@ public class Estudiante {
     public Estudiante() {
         this("Desconocido", 1, "00");
     }
+
+
+    // --------------- GETTERS ---------------
+    public String getNombre() {
+        return nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public String getCurso() {
+        return curso;
+    }
+    // --------------- GETTERS ---------------
 }
