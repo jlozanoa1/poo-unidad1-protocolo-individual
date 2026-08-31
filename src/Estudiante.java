@@ -6,21 +6,23 @@ public class Estudiante {
     // ------------- CONSTRUCTORES -------------
     // 1. Constructor principal
     public Estudiante(String nombre, int edad, String curso) {
-        if ((nombre != null && nombre.isEmpty()) || (nombre != null && nombre.isBlank())) {
+        if ((nombre != null && nombre.trim().isEmpty()) ||
+                (nombre != null && nombre.trim().isBlank())) {
             throw new IllegalArgumentException("El nombre del estudiante no debe estar vacío.");
         }
 
-        if (edad < 1) {
+        if (edad <= 0) {
             throw new IllegalArgumentException("La edad del estudiante no debe ser menor a 0.");
         }
 
-        if ((curso != null && curso.isEmpty()) || (curso != null && curso.isBlank())) {
+        if ((curso != null && curso.trim().isEmpty()) ||
+                (curso != null && curso.trim().isBlank())) {
             throw new IllegalArgumentException("El curso del estudiante no debe estar vacío.");
         }
 
-        this.nombre = nombre;
-        this.edad = edad;
-        this.curso = curso;
+        this.nombre = nombre.trim();
+        this.edad = edad.trim();
+        this.curso = curso.trim();
     }
 
     // 2. Constructor con dos parámetros
@@ -32,6 +34,7 @@ public class Estudiante {
     public Estudiante() {
         this("Desconocido", 1, "00");
     }
+    // ------------- FIN - CONSTRUCTORES -------------
 
 
     // --------------- GETTERS ---------------
@@ -44,5 +47,5 @@ public class Estudiante {
     public String getCurso() {
         return curso;
     }
-    // --------------- GETTERS ---------------
+    // --------------- FIN - GETTERS ---------------
 }
