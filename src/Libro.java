@@ -48,15 +48,15 @@ public class Libro {
     }
 
     public String getTitulo() {
-        return titulo;
+        return this.titulo;
     }
 
     public String getAutor() {
-        return autor;
+        return this.autor;
     }
 
     public int getNumeroPaginas() {
-        return numeroPaginas;
+        return this.numeroPaginas;
     }
 
     // ----------- FIN - GETTERS ------------

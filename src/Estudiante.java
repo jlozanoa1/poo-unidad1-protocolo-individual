@@ -39,13 +39,13 @@ public class Estudiante {
 
     // --------------- GETTERS ---------------
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
     public String getCurso() {
-        return curso;
+        return this.curso;
     }
     // --------------- FIN - GETTERS ---------------
 }

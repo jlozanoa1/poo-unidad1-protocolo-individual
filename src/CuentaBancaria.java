@@ -6,7 +6,7 @@ class CuentaBancaria {
     // ---------- CONSTRUCTORES ----------
     // 1. Constructor principal.
     public CuentaBancaria(String numeroCuenta, double saldo, String tipoCuenta) {
-        if (numeroCuenta.length() != 10) {
+        if (numeroCuenta.trim().length() != 10) {
             throw new IllegalArgumentException("El número de cuenta debe tener 10 dígitos.");
         }
 
@@ -14,7 +14,8 @@ class CuentaBancaria {
             throw new IllegalArgumentException("El saldo no puede ser menor que $1.");
         }
 
-        if (tipoCuenta.toLowerCase().equals("credito") || tipoCuenta.toLowerCase().equals("debito")) {
+        if (tipoCuenta.trim().toLowerCase().equals("credito") ||
+                tipoCuenta.trim().toLowerCase().equals("debito")) {
             throw new IllegalArgumentException("El tipo de cuenta debe ser \"credito\" o \"debito\".");
         }
     }
