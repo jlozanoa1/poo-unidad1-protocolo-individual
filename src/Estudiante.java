@@ -27,4 +27,9 @@ public class Estudiante {
     public Estudiante(String nombre, int edad) {
         this(nombre, edad, "00");
     }
+
+    // 3. Constructor sin parámetros con valores por defecto
+    public Estudiante() {
+        this("Desconocido", 1, "00");
+    }
 }
