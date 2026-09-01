@@ -7,6 +7,11 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
 
         // Creación de objetos de tipo "Libro"
+        instanciarLibros(teclado);
+    }
+
+
+    private static void instanciarLibros(Scanner teclado) {
         // 1. Sin parámetros, valores por defecto
         Libro libro1 = new Libro();
 
