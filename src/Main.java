@@ -1,31 +1,20 @@
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        // Creación de un objeto Libro sin parámetros
+        // Inicializar Scanner para entrada por teclado
+        Scanner teclado = new Scanner(System.in);
+
+        // Creación de objetos de tipo "Libro"
+        // 1. Sin parámetros, valores por defecto
         Libro libro1 = new Libro();
-        System.out.println(libro1);
-        System.out.printf("%n%n");
 
+        // 2. Solo con título y autor
+        Libro libro2 = new Libro("El conde de Montecristo", "Alexandre Dumas & Auguste Maquet");
 
-        // Creación de objeto Libro con argumentos
-        // completos
-        Libro libro2 = new Libro(
-            "Don Quijote de la Mancha",
-            "Miguel de Cervantes",
-            1000
-        );
-        System.out.println(libro2);
-        System.out.printf("%n%n");
+        // 3. Con todos los argumentos completos
+        Libro libro3 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 1605);
 
-
-        // Creación de objeto Libro con argumentos
-        // incompletos
-        Libro libro3 = new Libro(
-            // SIN TÍTULO
-            "",
-            "Miguel de Cervantes",
-            1000
-        );
-        System.out.println(libro3);
-        System.out.printf("%n%n");
     }
 }
