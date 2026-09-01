@@ -10,11 +10,28 @@ public class Main {
         // 1. Sin parámetros, valores por defecto
         Libro libro1 = new Libro();
 
+
         // 2. Solo con título y autor
-        Libro libro2 = new Libro("El conde de Montecristo", "Alexandre Dumas & Auguste Maquet");
+        System.out.print("Ingrese el título del libro 2: ");
+        String libro2Titulo = teclado.nextLine();
+
+        System.out.print("Ingrese el autor del libro 2: ");
+        String libro2Autor = teclado.nextLine();
+        Libro libro2 = new Libro(libro2Titulo, libro2Autor);
+
 
         // 3. Con todos los argumentos completos
-        Libro libro3 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 1605);
+        System.out.print("Ingrese el título del libro 3: ");
+        String libro3Titulo = teclado.nextLine();
 
+        System.out.print("Ingrese el autor del libro 3: ");
+        String libro3Autor = teclado.nextLine();
+
+        System.out.print("El número de páginas del libro 3: ");
+        int libro3Paginas = teclado.nextInt();
+
+        Libro libro3 = new Libro(
+                libro3Titulo, libro3Autor,
+                libro3Paginas);
     }
 }

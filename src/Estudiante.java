@@ -21,7 +21,7 @@ public class Estudiante {
         }
 
         this.nombre = nombre.trim();
-        this.edad = edad.trim();
+        this.edad = edad;
         this.curso = curso.trim();
     }
 
