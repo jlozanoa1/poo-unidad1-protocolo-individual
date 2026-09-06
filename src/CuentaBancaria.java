@@ -14,10 +14,15 @@ class CuentaBancaria {
             throw new IllegalArgumentException("El saldo no puede ser menor que $1.");
         }
 
-        if (tipoCuenta.trim().toLowerCase().equals("credito") ||
-                tipoCuenta.trim().toLowerCase().equals("debito")) {
+        String tipoNormalizado = tipoCuenta.trim().toLowerCase();
+
+        if (!tipoNormalizado.equals("credito") && !tipoNormalizado.equals("debito")) {
             throw new IllegalArgumentException("El tipo de cuenta debe ser \"credito\" o \"debito\".");
         }
+
+        this.numeroCuenta = numeroCuenta;
+        this.saldo = saldo;
+        this.tipoCuenta = tipoNormalizado;
     }
 
     // 2. Constructor parametrizado con dos parámetros.

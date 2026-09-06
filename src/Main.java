@@ -7,7 +7,10 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
 
         // Creación de objetos de tipo "Libro"
-        instanciarLibros(teclado);
+        // instanciarLibros(teclado);
+
+        System.out.printf("%n%n");
+        instanciarCuentaBancaria(teclado);
     }
 
 
@@ -40,5 +43,12 @@ public class Main {
                 libro3Paginas);
 
         System.out.printf("Todos los libros creados.%n%s%n%s%n%s%n", libro1, libro2, libro3);
+    }
+
+
+    public static void instanciarCuentaBancaria(Scanner teclado) {
+        // 1. Sin parámetros, valores por defecto
+        CuentaBancaria cuenta1 = new CuentaBancaria();
+        System.out.print(cuenta1.toString());
     }
 }
