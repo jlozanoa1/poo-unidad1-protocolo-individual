@@ -38,5 +38,7 @@ public class Main {
         Libro libro3 = new Libro(
                 libro3Titulo, libro3Autor,
                 libro3Paginas);
+
+        System.out.printf("Todos los libros creados.%n%s%n%s%n%s%n", libro1, libro2, libro3);
     }
 }
