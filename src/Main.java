@@ -8,8 +8,13 @@ public class Main {
         // Creación de objetos de tipo "Libro"
         // instanciarLibros(teclado);
 
-        System.out.printf("%n%n");
+        // Creación de objetos de tipo "CuentaBancaria"
+        System.out.printf("%n---------------------------------------------------------------------------------%n%n");
         instanciarCuentaBancaria(teclado);
+
+        // Creación de objetos de tipo "Estudiante"
+        System.out.printf("%n---------------------------------------------------------------------------------%n%n");
+        instanciarEstudiantes(teclado);
     }
 
     private static void instanciarLibros(Scanner teclado) {
@@ -24,6 +29,8 @@ public class Main {
         String libro2Autor = teclado.nextLine();
         Libro libro2 = new Libro(libro2Titulo, libro2Autor);
 
+        System.out.printf("%n");
+
         // 3. Con todos los argumentos completos
         System.out.print("Ingrese el título del libro 3: ");
         String libro3Titulo = teclado.nextLine();
@@ -34,11 +41,15 @@ public class Main {
         System.out.print("El número de páginas del libro 3: ");
         int libro3Paginas = teclado.nextInt();
 
+        teclado.nextLine();
+
         Libro libro3 = new Libro(
                 libro3Titulo, libro3Autor,
                 libro3Paginas);
 
-        System.out.printf("Todos los libros creados.%n%s%n%s%n%s%n", libro1, libro2, libro3);
+        System.out.printf("%n");
+
+        System.out.printf("Todos los libros creados.%s%n%s%n%s%n", libro1, libro2, libro3);
     }
 
     public static void instanciarCuentaBancaria(Scanner teclado) {
@@ -52,6 +63,8 @@ public class Main {
         System.out.print("Ingrese el tipo de cuenta para la cuenta 2: ");
         String cuenta2Tipo = teclado.nextLine();
         CuentaBancaria cuenta2 = new CuentaBancaria(cuenta2Numero, cuenta2Tipo);
+
+        System.out.printf("%n");
 
         // 3. Con todos los parámetros completos
         System.out.print("Ingrese el número de cuenta para la cuenta 3: ");
@@ -67,6 +80,42 @@ public class Main {
         CuentaBancaria cuenta3 = new CuentaBancaria(
                 cuenta3Numero, cuenta3Saldo, cuenta3Tipo);
 
+        System.out.printf("%n");
+
         System.out.printf("Todos las cuentas creadas.%n%s%n%s%n%s%n", cuenta1, cuenta2, cuenta3);
+    }
+
+    private static void instanciarEstudiantes(Scanner teclado) {
+        // 1. Sin parámetros
+        Estudiante estudiante1 = new Estudiante();
+
+        // 2. Con dos parámetros, nombre y edad
+        System.out.print("Ingrese el nombre del estudiante 2: ");
+        String estudiante2nombre = teclado.nextLine();
+
+        System.out.print("Ingrese la edad para el estudiante 2: ");
+        int estudiante2edad = teclado.nextInt();
+        teclado.nextLine();
+
+        Estudiante estudiante2 = new Estudiante(
+                estudiante2nombre, estudiante2edad);
+
+        System.out.printf("%n");
+
+        // 3. Con todos los parámetros
+        System.out.print("Ingrese el nombre del estudiante 3: ");
+        String estudiante3nombre = teclado.nextLine();
+
+        System.out.print("Ingrese la edad para el estudiante 3: ");
+        int estudiante3edad = teclado.nextInt();
+        teclado.nextLine();
+
+        Estudiante estudiante3 = new Estudiante(
+                estudiante3nombre, estudiante3edad);
+
+        System.out.printf("%n");
+
+        System.out.printf("Todos los estudiantes creados.%n%s%n%s%n%s%n",
+                estudiante1, estudiante2, estudiante3);
     }
 }
