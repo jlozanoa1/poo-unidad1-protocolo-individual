@@ -36,11 +36,10 @@ class CuentaBancaria {
     }
     // ---------- FIN - CONSTRUCTORES ----------
 
-
     // ---------- GETTERS ----------
     @Override
     public String toString() {
-        return String.format("Número de cuenta: %s | Saldo: %f | Tipo de cuenta: %s.",
+        return String.format("Número de cuenta: %s | Saldo: %.2f | Tipo de cuenta: %s.",
                 this.numeroCuenta, this.saldo, this.tipoCuenta);
     }
 
