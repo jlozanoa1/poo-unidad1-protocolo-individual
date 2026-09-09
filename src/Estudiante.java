@@ -36,14 +36,21 @@ public class Estudiante {
     }
     // ------------- FIN - CONSTRUCTORES -------------
 
-
     // --------------- GETTERS ---------------
+    @Override
+    public String toString() {
+        return String.format("Nombre : %s | Edad : %d | Curso : %s",
+                this.nombre, this.edad, this.curso);
+    }
+
     public String getNombre() {
         return this.nombre;
     }
+
     public int getEdad() {
         return this.edad;
     }
+
     public String getCurso() {
         return this.curso;
     }

@@ -6,7 +6,7 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
 
         // Creación de objetos de tipo "Libro"
-        // instanciarLibros(teclado);
+        instanciarLibros(teclado);
 
         // Creación de objetos de tipo "CuentaBancaria"
         System.out.printf("%n---------------------------------------------------------------------------------%n%n");
@@ -82,7 +82,8 @@ public class Main {
 
         System.out.printf("%n");
 
-        System.out.printf("Todos las cuentas creadas.%n%s%n%s%n%s%n", cuenta1, cuenta2, cuenta3);
+        System.out.printf("Todos las cuentas creadas.%n%s%n%s%n%s%n",
+                cuenta1, cuenta2, cuenta3);
     }
 
     private static void instanciarEstudiantes(Scanner teclado) {
@@ -110,8 +111,10 @@ public class Main {
         int estudiante3edad = teclado.nextInt();
         teclado.nextLine();
 
+        System.out.print("Ingrese el curso para el estudiante 3: ");
+        String estudiante3curso = teclado.nextLine();
         Estudiante estudiante3 = new Estudiante(
-                estudiante3nombre, estudiante3edad);
+                estudiante3nombre, estudiante3edad, estudiante3curso);
 
         System.out.printf("%n");
 
